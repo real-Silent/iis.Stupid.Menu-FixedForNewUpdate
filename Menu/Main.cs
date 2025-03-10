@@ -2616,6 +2616,8 @@ namespace iiMenu.Menu
             {
                 isOnPC = false;
             }
+
+            // The Actual Fix -- ii should be fast at doing this but nuh uh (jk) - Silent :3
             if (isKeyboardCondition)
             {
                 GameObject.Find("Player Objects/Third Person Camera/Shoulder Camera/CM vcam1").SetActive(false);
