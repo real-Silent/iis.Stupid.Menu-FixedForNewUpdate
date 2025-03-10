@@ -1,4 +1,4 @@
-﻿using BepInEx;
+using BepInEx;
 using ExitGames.Client.Photon;
 using GorillaExtensions;
 using GorillaLocomotion.Gameplay;
@@ -2614,7 +2614,14 @@ namespace iiMenu.Menu
             {
                 isOnPC = false;
             }
-
+            if (isKeyboardCondition)
+            {
+                GameObject.Find("Player Objects/Third Person Camera/Shoulder Camera/CM vcam1").SetActive(false);
+            }
+            else
+            {
+                GameObject.Find("Player Objects/Third Person Camera/Shoulder Camera/CM vcam1").SetActive(true);
+            }
             if (physicalMenu)
             {
                 if (physicalOpenPosition == Vector3.zero)
