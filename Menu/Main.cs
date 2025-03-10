@@ -138,6 +138,8 @@ namespace iiMenu.Menu
                 {
                     if (!buttonCondition && menu != null)
                     {
+                        // This Was Breaking Menu Go To RecenterMenu() to see full fix
+                        GameObject.Find("Player Objects/Third Person Camera/Shoulder Camera/CM vcam1").SetActive(true);
                         if (dynamicSounds)
                         {
                             Play2DAudio(LoadSoundFromURL("https://github.com/iiDk-the-actual/ModInfo/raw/main/close.wav", "close.wav"), buttonClickVolume / 10f);
