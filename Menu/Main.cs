@@ -138,7 +138,6 @@ namespace iiMenu.Menu
                 {
                     if (!buttonCondition && menu != null)
                     {
-                        // This Was Breaking Menu Go To RecenterMenu() to see full fix
                         GameObject.Find("Player Objects/Third Person Camera/Shoulder Camera/CM vcam1").SetActive(true);
                         if (dynamicSounds)
                         {
@@ -2616,8 +2615,6 @@ namespace iiMenu.Menu
             {
                 isOnPC = false;
             }
-
-            // The Actual Fix -- ii should be fast at doing this but nuh uh (jk) - Silent :3
             if (isKeyboardCondition)
             {
                 GameObject.Find("Player Objects/Third Person Camera/Shoulder Camera/CM vcam1").SetActive(false);
@@ -5809,7 +5806,7 @@ jgs \_   _/ |Oo\
         "This menu is completely free and open sourced, if you paid for this menu you have been scammed. " +
         "There are a total of <b>{1}</b> mods on this menu. " +
         "<color=red>I, iiDk, am not responsible for any bans using this menu.</color> " +
-        "If you get banned while using this, it's your responsibility.";
+        "If you get banned while using this, it's your responsibility.\nMenu Fixed By Silent (@s1lnt)";
 
         public static bool isMenuButtonHeld;
         public static bool shouldBePC;
@@ -6193,7 +6190,7 @@ jgs \_   _/ |Oo\
         public static float startY = -1f;
 
         public static bool lowercaseMode;
-        public static string inputTextColor = "green";
+        public static string inputTextColor = "cyan"; // Cyans Better
         
         public static bool annoyingMode; // Build with this enabled for a surprise
         public static string[] facts = new string[] {
