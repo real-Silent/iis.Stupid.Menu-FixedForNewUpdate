@@ -1,4 +1,4 @@
-﻿using iiMenu.Menu;
+using iiMenu.Menu;
 using iiMenu.Notifications;
 using System.IO;
 using static iiMenu.Menu.Main;
@@ -136,6 +136,34 @@ namespace iiMenu.Mods
             }
             NotifiLib.ClearAllNotifications();
             NotifiLib.SendNotification("<color=grey>[</color><color=purple>PRESET</color><color=grey>]</color> Goldentrophy preset enabled successfully.");
+        }
+
+        public static void SilentPreset()
+        {
+            string[] presetMods = new string[]
+            {
+                "Inner Outline Menu",
+                "Outline Menu",
+                "Tag Gun",
+                "WASD Fly",
+                "PC Button Click",
+            };
+
+            themeType = 14;
+            pageButtonType = 1;
+            fontCycle = -1;
+
+            Settings.ChangeMenuTheme();
+            Settings.ChangePageType();
+            Settings.ChangeFontType();
+
+            Settings.Panic();
+            foreach (string mod in presetMods)
+            {
+                Main.Toggle(mod);
+            }
+            NotifiLib.ClearAllNotifications();
+            NotifiLib.SendNotification("<color=grey>[</color><color=purple>PRESET</color><color=grey>]</color> Silent preset enabled successfully.");
         }
 
         public static void PerformancePreset()
