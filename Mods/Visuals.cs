@@ -2286,6 +2286,10 @@ namespace iiMenu.Mods
 
                     lineColor = infectedColor;
                 }
+                if (!PlayerIsTagged(playerRig))
+                {
+                    lineColor = Color.cyan;// help :sob: - silent
+                }
 
                 LineRenderer line = getLineRender(hiddenOnCamera);
 
