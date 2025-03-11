@@ -1,4 +1,4 @@
-﻿using BepInEx;
+using BepInEx;
 using GorillaNetworking;
 using iiMenu.Classes;
 using iiMenu.Menu;
@@ -17,7 +17,7 @@ namespace iiMenu.UI
 {
     public class Main : MonoBehaviour
     {
-        private string inputText = "goldentrophy";
+        private string inputText = "silent";
 
         private string r = "255";
         private string g = "128";
